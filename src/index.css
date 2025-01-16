@@ -1,13 +1,56 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(90deg, rgba(251,220,201,1) 0%, rgba(247,165,112,1) 33%, rgba(251,229,215,1) 67%, rgba(248,182,116,1) 100%);
+}
+*{
+  margin: 0;
+  padding: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* navbar style */
+.brand-highlight {
+  font-size: 1.5rem !important;
+  color: orange !important;
+  display: flex;
+  align-items: center;
+}
+
+/* hero style */
+.hero-container {
+  align-items: center;
+}
+
+/* heading style */
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.heading p{
+  background: linear-gradient(90deg, rgba(21,8,227,1) 0%, rgba(236,242,245,1) 100%, rgba(3,137,206,1) 100%, rgba(244,162,144,1) 100%, rgba(0,212,255,1) 100%);
+  background-clip: text;
+  font-size: 2em;
+  font-weight: 800;
+  color: transparent;
+}
+
+/* project style  */
+.item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(0,0,0,0.6);
 }
