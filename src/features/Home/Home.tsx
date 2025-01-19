@@ -1,4 +1,5 @@
 import AboutMe from "../About-Me/AboutMe"
+import ContactMe from "../Contact-Me/ContactMe"
 import Projects from "../Projects/Projects"
 import Technologies from "../Technologies/Technologies"
 import WorkExperiences from "../work-experiences/WorkExperiences"
@@ -11,7 +12,8 @@ const Home = () => {
       <AboutMe />
       <Projects />
       <Technologies />
-      <WorkExperiences />
+      {/* <WorkExperiences /> */}
+      <ContactMe />
     </>
   )
 }
