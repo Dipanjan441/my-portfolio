@@ -28,6 +28,53 @@ code {
   align-items: center;
 }
 
+/* Name Title */
+.hero-title {
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #2c3e50;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #34495e;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #e67e22, #d35400);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tagline */
+.hero-tagline {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #e67e22, #d35400);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Description */
+.hero-description {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  max-width: 500px;
+  margin-top: 15px;
+}
+
+
 /* heading style */
 .heading {
   display: flex;
@@ -53,4 +100,31 @@ code {
   left: 0;
   right: 0;
   background: rgb(0,0,0,0.6);
+}
+
+/* card style  for technology section*/
+.card-scale {
+  transition: ease-in-out 0.3s all;
+}
+.card-scale:hover {
+  scale: 1.1;
+}
+
+/* content slider style  */
+.container {
+  width: 100%;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }

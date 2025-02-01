@@ -10,7 +10,7 @@ const Technologies = () => {
           {TechIcon.map((techIcon) =>
             <div key={techIcon.id} className="col-6 col-md-4 col-lg-4 mb-4 d-flex justify-content-center">
               <div
-                className="card shadow"
+                className="card card-scale shadow"
                 style={{
                   width: "200px",
                   height: "200px",

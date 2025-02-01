@@ -1,17 +1,25 @@
-import { Col, Container, Image, Row } from "react-bootstrap"
-import heroImage from '../../../assets/images/hero-1.jpg';
+import { Col, Container, Row } from "react-bootstrap"
+import { HeroData } from "../../../constants/data";
+import ContentSlider from "../../../components/ContentSlider";
+import { SliderType } from "../../../type";
+// import {motion} from "framer-motion";
 
 const Hero = () => {
   return (
     <Container>
         <Row className="hero-container">
-            <Col md={6} xs={12}>
-                <h1>Dipanjan Tripathi</h1>
-                <p className="h4 mt-4 mb-3">Frontend Developer</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ex modi. Obcaecati eos veritatis tempora esse ipsum aliquid, ad reprehenderit assumenda totam quisquam repudiandae deleniti quas mollitia, asperiores expedita vitae officiis nulla impedit alias adipisci aliquam debitis? Corrupti eos fugit suscipit culpa ratione? Obcaecati recusandae delectus architecto facilis enim harum?</p>
+            <Col md={6} xs={12} className="text-center text-md-start">
+                <h1 className="mt-2 hero-title">
+                  {HeroData.title}
+                </h1>
+                <p className="mt-2 mb-2 hero-subtitle">{HeroData.subTitle}</p>
+                <p className="mt-2 mb-2 hero-tagline">{HeroData.tagLine}</p>
+                <p className="hero-description">{HeroData.description}</p>
             </Col>
             <Col md={6} xs={12}>
-                <Image className="rounded img-fluid mx-auto" src={heroImage} alt="hero image" />
+              <div style={{width:'80%',margin: '0 auto'}}>
+                <ContentSlider sliderType={SliderType.cards} sliderImages={HeroData.heroImage} />
+              </div>
             </Col>
         </Row>
     </Container>

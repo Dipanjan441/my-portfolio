@@ -1,7 +1,8 @@
-import React from 'react'
 import DisplayHeading from '../../components/Heading'
-import { Col, Container, Image, Row } from 'react-bootstrap'
-import heroImage from '../../assets/images/about-me-1.jpg';
+import { Col, Container, Row } from 'react-bootstrap'
+import { AboutMeData } from '../../constants/data';
+import ContentSlider from '../../components/ContentSlider';
+import { SliderType } from '../../type';
 
 const AboutMe = () => {
   return (
@@ -9,11 +10,17 @@ const AboutMe = () => {
       <DisplayHeading label='About Me' />
       <Container>
         <Row className="hero-container">
-            <Col md={6} xs={12}>
-                <Image className="rounded img-fluid mx-auto" src={heroImage} alt="hero image" />
+            <Col className="mb-4" md={6} xs={12}>
+                <ContentSlider sliderType={SliderType.cube} sliderImages={AboutMeData.sliderImages} />
             </Col>
             <Col md={6} xs={12}>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, ex modi. Obcaecati eos veritatis tempora esse ipsum aliquid, ad reprehenderit assumenda totam quisquam repudiandae deleniti quas mollitia, asperiores expedita vitae officiis nulla impedit alias adipisci aliquam debitis? Corrupti eos fugit suscipit culpa ratione? Obcaecati recusandae delectus architecto facilis enim harum?</p>
+              {
+                AboutMeData.aboutText.map((text,index)=>
+                <p key={index}>
+                  {text}
+                </p>
+                )
+              }
             </Col>
         </Row>
       </Container>

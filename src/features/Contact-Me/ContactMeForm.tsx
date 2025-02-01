@@ -1,10 +1,13 @@
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { EMAIL_PUBLIC_KEY, EMAIL_SERVICES_ID, EMAIL_TEMPLATE_ID } from '../../constant';
+import { toast } from 'react-toastify';
 
 const ContactMeForm = () => {
+    const [isLoading, setIsLoading] = useState(false);
     const form = useRef<HTMLFormElement>(null);
     const sendEmail = (e: React.FocusEvent<HTMLFormElement>) => {
+        setIsLoading(true);
         e.preventDefault();
         console.log(form.current)
         if (form.current) {
@@ -14,11 +17,15 @@ const ContactMeForm = () => {
                 .then(
                     () => {
                         console.log('SUCCESS!');
+                        toast("Success!! Your message has been sent to Dipanjan",{type:"success"});
                     },
                     (error) => {
                         console.log('FAILED...', error.text);
+                        toast("Oops!! Something went wrong",{type:"error"});
                     },
-                );
+                ).finally(()=> {
+                    setIsLoading(false)
+                });
         } else {
             console.log('form refernce is null')
         }
@@ -64,8 +71,8 @@ const ContactMeForm = () => {
                     required
                 ></textarea>
             </div>
-            <button type="submit" className="btn btn-primary w-100">
-                Submit
+            <button disabled={isLoading} type="submit" className="btn btn-primary w-100">
+                {isLoading ? "Submitting" : "Submit"}
             </button>
         </form>
     )
