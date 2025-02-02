@@ -14,6 +14,6 @@ export const TechIcon = [
     {id:5, icon: <FaWordpress color="blue" size={40}/>, name: "Wordpress"},
     {id:6, icon: <SiMongodb color="green" size={40}/>, name: "Mongodb"},
     {id:7, icon: <SiReact color="blue" size={40}/>, name: "React Native"},
-    {id:8, icon: <img src={ExpressIcon} height={40}/>, name: "Express.js"},
-    {id:8, icon: <img src={BootstrapIcon} height={40}/>, name: "Bootstrap"},
+    {id:8, icon: <img src={ExpressIcon} alt="express Icon" height={40}/>, name: "Express.js"},
+    {id:9, icon: <img src={BootstrapIcon} alt="bootstrap icon" height={40}/>, name: "Bootstrap"},
 ]

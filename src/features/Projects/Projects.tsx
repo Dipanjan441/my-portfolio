@@ -1,24 +1,22 @@
 import DisplayHeading from '../../components/Heading'
-import { Carousel } from 'react-bootstrap'
-import { PROJECT_SLIDER_INFORMATION } from '../../constants/data'
+import { ProjectData } from '../../constants/data'
+import ProjectCards from './ProjectCards'
 
 const Projects = () => {
   return (
     <div>
       <DisplayHeading label='Projects' />
-      <Carousel className='container'>
-        {
-          PROJECT_SLIDER_INFORMATION.map((silder)=>(
-            <Carousel.Item className='item' key={silder.id}>
-              <img src={silder.image} className="d-block w-100" alt="..." />
-              <Carousel.Caption>
-                <h3>{silder.heading}</h3>
-                <p>{silder.about}</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          ))
-        }
-    </Carousel>
+      <div className="container">
+        <div className="row justify-content-center">
+          {
+            ProjectData.map((projectInfo)=>(
+              <div key={projectInfo.id} className="col-12 col-sm-6 col-md-4 mb-4">
+                <ProjectCards {...projectInfo} />
+              </div>
+            ))
+          }
+        </div>
+      </div>
     </div>
   )
 }

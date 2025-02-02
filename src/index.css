@@ -1,3 +1,30 @@
+:root {
+  --bs-primary: #f57c00 !important; /* Orange */
+  --bs-primary-rgb: 245, 124, 0 !important; /* Needed for hover effects */
+  --bs-secondary: #ffffff !important; /* White */
+  --bs-secondary-rgb: 255, 255, 255 !important;
+}
+
+/* Fix Bootstrap buttons */
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+
+.btn-primary:hover {
+  background-color: rgba(var(--bs-primary-rgb), 0.85) !important;
+}
+
+.btn-secondary {
+  background-color: var(--bs-secondary) !important;
+  border-color: var(--bs-secondary) !important;
+  color: #000 !important; /* Ensuring visibility */
+}
+
+.btn-secondary:hover {
+  background-color: rgba(var(--bs-secondary-rgb), 0.85) !important;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -84,7 +111,7 @@ code {
   margin-bottom: 1rem;
 }
 .heading p{
-  background: linear-gradient(90deg, rgba(21,8,227,1) 0%, rgba(236,242,245,1) 100%, rgba(3,137,206,1) 100%, rgba(244,162,144,1) 100%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, rgba(21,8,227,1) 0%, rgb(250, 166, 9) 100%, rgba(3,137,206,1) 100%, rgba(244,162,144,1) 100%, rgba(0,212,255,1) 100%);
   background-clip: text;
   font-size: 2em;
   font-weight: 800;
@@ -92,15 +119,20 @@ code {
 }
 
 /* project style  */
-.item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgb(0,0,0,0.6);
+.project-card {
+  min-height: 60vh !important;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
 }
+
+.card-tex {
+  max-height: 40vh !important;
+  overflow-y: auto;
+  scrollbar-width: 1;
+}
+
 
 /* card style  for technology section*/
 .card-scale {
