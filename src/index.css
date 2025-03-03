@@ -31,6 +31,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(90deg, rgba(251,220,201,1) 0%, rgba(247,165,112,1) 33%, rgba(251,229,215,1) 67%, rgba(248,182,116,1) 100%);
 }
+html, body {
+  overflow-x: hidden;
+}
 *{
   margin: 0;
   padding: 0;
@@ -160,3 +163,15 @@ code {
   display: block;
   width: 100%;
 }
+
+/* progress bar style  */
+.progressbar {
+  background-color: rgb(245, 124, 0);
+  height: 3px;
+  left: 0;
+  top: 0;
+  position: fixed;
+  right: 0;
+  z-index: 10000;
+}
+

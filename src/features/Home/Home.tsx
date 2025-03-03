@@ -5,10 +5,14 @@ import Technologies from "../Technologies/Technologies"
 import WorkExperiences from "../work-experiences/WorkExperiences"
 import Hero from "./hero/Hero"
 
-const Home = () => {
+interface Props {
+  navbarHeight: number
+}
+
+const Home = ({navbarHeight}:Props) => {
   return (
     <>
-      <Hero />
+      <Hero navbarHeight={navbarHeight} />
       <AboutMe />
       <Projects />
       <Technologies />
