@@ -41,7 +41,7 @@ export const ProjectData = [
 //hero section data
 export const HeroData = {
     title: "Dipanjan Tripathi",
-    subTitle: "Web Developer",
+    subTitle: ["Web Developer","Frontend Developer", "Power BI Developer","Photographer"],
     tagLine: "I build, maintain & scale high-performance React applications with excellence.",
     description: "I’m a Web & Mobile Developer with 3 years of expertise in React, React Native, and Next.js, building high-performance, scalable, and visually engaging web and native applications. 🚀",
     heroImage: [

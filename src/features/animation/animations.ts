@@ -20,3 +20,12 @@ export const fadeInUp = (delay: number): Variants => ({
         transition: {duration: 0.4, ease: 'anticipate',delay: delay}
     }
 })
+
+export const scaleIn = (delay: number): Variants => ({
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { 
+        opacity: 1, 
+        scale: 1,
+        transition: { duration: 0.6, ease: "easeOut", delay } 
+    }
+});
