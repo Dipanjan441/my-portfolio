@@ -1,4 +1,4 @@
-import { FaCode, FaMobileAlt, FaDatabase } from "react-icons/fa";
+import { FaCode, FaMobileAlt, FaDatabase, FaGlobe } from "react-icons/fa";
 import aboutMeImage1 from '../assets/images/about-me-1.jpg';
 import aboutMeImage2 from '../assets/images/about-me-2.jpg';
 import aboutMeImage3 from '../assets/images/about-me-3.jpg';
@@ -33,8 +33,26 @@ export const ProjectData = [
         title: "Job Evalutation Tool",
         description: "Developed the frontend of a feature-rich form-based application designed for the client’s internal staff to efficiently evaluate job performance and manage payroll changes. The application includes dynamic forms, real-time validation, and multilingual support, ensuring a seamless and user-friendly experience.",
         buttonText: "View Project",
-        technologies: ["React","React Native","react-i18next","Redux-Toolkit","Material UI"],
+        technologies: ["React","react-i18next","Redux-Toolkit","Material UI","Styled Components"],
         onButtonClick: () => window.open("#", "_blank"),
+    },
+    {
+        id: 4,
+        icon: FaMobileAlt,
+        title: "Uber Eats Clone (Frontend)",
+        description: "Developed a frontend clone of the Uber Eats app using React Native, replicating the UI and user experience of the original app. Implemented features such as restaurant listings, food categories, cart management, and interactive navigation to ensure a seamless user experience.",
+        buttonText: "View Project",
+        technologies: ["React Native","Redux","React Navigation"],
+        onButtonClick: () => window.open("https://github.com/Dipanjan441/UberEats-clone", "_blank"),
+    },
+    {
+        id: 5,
+        icon: FaGlobe,
+        title: "Personal Portfolio Website",
+        description: "Designed and developed a personal portfolio website to showcase projects, skills, and experience. Built using React and TypeScript, with smooth animations powered by Framer Motion and an interactive project showcase using SwiperJS. The website is fully responsive and provides an engaging user experience.",
+        buttonText: "View Project",
+        technologies: ["React", "TypeScript", "Framer Motion", "SwiperJS", "Bootstrap"],
+        onButtonClick: () => window.open("https://github.com/Dipanjan441/my-portfolio", "_blank"),
     },
 ];
 
