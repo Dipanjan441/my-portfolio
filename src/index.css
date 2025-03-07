@@ -61,6 +61,8 @@ code {
 /* Name Title */
 .hero-title {
   font-size: 2.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   font-weight: 700;
   color: #2c3e50;
   animation: fadeInDown 1s ease-in-out;
@@ -135,20 +137,6 @@ code {
   height: 500px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-/* Ensure Card Body Fills the Space */
-/* .project-card .card-body {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-} */
-/* .project-card .card-text {
-  flex-grow: 1;
-  max-height: 250px;
-  overflow-y: auto;
-  scrollbar-width: none;
-} */
-
-/* Hover Effect */
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
@@ -191,4 +179,35 @@ code {
   right: 0;
   z-index: 10000;
 }
+
+/* footer style  */
+.footer {
+  background-color: #f57c00;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+}
+
+.footer-text {
+  color: white;
+  font-weight: 500;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 32px;
+  /* color: #555; */
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Social Media Hover Effects */
+.social-icon:hover {
+  transform: scale(1.2);
+  /* color: #0077b5; */
+}
+
 
