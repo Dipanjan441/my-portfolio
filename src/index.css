@@ -52,6 +52,13 @@ code {
   display: flex;
   align-items: center;
 }
+.navbar-nav .nav-link {
+  cursor: pointer !important;
+}
+.active-link {
+  color: orange !important;
+  text-decoration: none !important;
+}
 
 /* hero style */
 .hero-container {
@@ -207,7 +214,6 @@ code {
 /* Social Media Hover Effects */
 .social-icon:hover {
   transform: scale(1.2);
-  /* color: #0077b5; */
 }
 
 

@@ -1,4 +1,5 @@
 import DisplayHeading from "../../components/Heading"
+import { NavbarItemPath } from "../Navbar/navigation";
 import { TechIcon } from "./constant"
 import {motion} from "motion/react"
 
@@ -19,7 +20,7 @@ const Technologies = () => {
   };
 
   return (
-    <div>
+    <div id={NavbarItemPath.technical_experties}>
       <DisplayHeading label='Technologies' />
       <motion.div variants={containerVariants} initial="hidden" whileInView="visible" className="container my-4">
         <div className="row d-flex justify-content-center">

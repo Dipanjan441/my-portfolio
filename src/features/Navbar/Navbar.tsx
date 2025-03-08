@@ -2,6 +2,8 @@ import { useLayoutEffect, useRef } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import {Link} from 'react-scroll';
+import { NavbarItems } from './navigation';
 
 interface Props {
   setNavbarHeight: (height: number)=>void
@@ -28,11 +30,13 @@ const NavbarComponent = ({setNavbarHeight}: Props) => {
         <Navbar.Toggle aria-controls="my-navbar-nav" />
         <Navbar.Collapse id="my-navbar-nav">
           <Nav className="ms-auto fw-bold text-center">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#project">Projects</Nav.Link>
-            <Nav.Link href="#technical-experties">Technical Experties</Nav.Link>
-            <Nav.Link href="#social-media">Social Media</Nav.Link>
+            {
+              NavbarItems.map((item)=>(
+                <Nav.Link as="div">
+                  <Link key={item.id} to={item.path} smooth={true} spy={true} duration={300} offset={-80} activeClass='active-link' >{item.title}</Link>
+                </Nav.Link>
+              ))
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>

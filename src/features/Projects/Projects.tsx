@@ -1,5 +1,6 @@
 import DisplayHeading from '../../components/Heading'
 import { ProjectData } from '../../constants/data'
+import { NavbarItemPath } from '../Navbar/navigation'
 import ProjectCards from './ProjectCards'
 import { motion } from "motion/react"
 
@@ -9,7 +10,7 @@ const Projects = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
   return (
-    <div>
+    <div id={NavbarItemPath.projects}>
       <DisplayHeading label='Projects' />
       <div className="container">
         <div className="row justify-content-center">
@@ -20,7 +21,7 @@ const Projects = () => {
                 className="col-12 col-sm-6 col-md-4 mb-4"
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
+                // viewport={{ once: true, amount: 0.3 }}
                 variants={cardVariants}
                 transition={{ delay: index * 0.2 }}
               >

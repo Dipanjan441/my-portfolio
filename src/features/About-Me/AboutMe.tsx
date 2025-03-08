@@ -5,10 +5,11 @@ import ContentSlider from '../../components/ContentSlider';
 import { SliderType } from '../../type';
 import {motion} from "motion/react"
 import { fadeInUp, scaleIn } from '../animation/animations';
+import { NavbarItemPath } from '../Navbar/navigation';
 
 const AboutMe = () => {
   return (
-    <div>
+    <div id={NavbarItemPath.about_me}>
       <DisplayHeading label='About Me' />
       <Container>
         <Row className="hero-container">

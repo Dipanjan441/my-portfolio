@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import { fadeInUp, slideInLeft, slideInRight } from "../../animation/animations";
 import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
+import { NavbarItemPath } from "../../Navbar/navigation";
 
 interface Props {
   navbarHeight: number
@@ -19,7 +20,7 @@ const Hero = ({ navbarHeight }: Props) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <Container style={{ paddingTop: navbarHeight }}>
+    <Container id={NavbarItemPath.home} style={{ paddingTop: navbarHeight }}>
       <Row className="hero-container">
         <Col md={6} xs={12} className="text-center text-md-start">
           <motion.div

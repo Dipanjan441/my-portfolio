@@ -9,7 +9,6 @@ const ContactMeForm = () => {
     const sendEmail = (e: React.FocusEvent<HTMLFormElement>) => {
         setIsLoading(true);
         e.preventDefault();
-        console.log(form.current)
         if (form.current) {
             emailjs.sendForm(EMAIL_SERVICES_ID, EMAIL_TEMPLATE_ID, form.current, {
                 publicKey: EMAIL_PUBLIC_KEY,
@@ -17,6 +16,7 @@ const ContactMeForm = () => {
                 .then(
                     () => {
                         console.log('SUCCESS!');
+                        form.current?.reset();
                         toast("Success!! Your message has been sent to Dipanjan",{type:"success"});
                     },
                     (error) => {
@@ -34,7 +34,7 @@ const ContactMeForm = () => {
         <form ref={form} onSubmit={sendEmail} style={{ width: "100%" }}>
             <div className="mb-3">
                 <label htmlFor="name" className="form-label">
-                    Name
+                    Name<span style={{color:'red'}}>*</span>
                 </label>
                 <input
                     name='from_name'
@@ -47,7 +47,7 @@ const ContactMeForm = () => {
             </div>
             <div className="mb-3">
                 <label htmlFor="email" className="form-label">
-                    Email
+                    Email<span style={{color:'red'}}>*</span>
                 </label>
                 <input
                     name='from_email'
@@ -59,8 +59,22 @@ const ContactMeForm = () => {
                 />
             </div>
             <div className="mb-3">
+                <label htmlFor="phoneNo" className="form-label">
+                    Phone Number
+                </label>
+                <input
+                    name='from_phnNo'
+                    type="tel"
+                    className="form-control"
+                    id="phoneNo"
+                    placeholder="Enter your phone number"
+                    pattern="^[1-9][0-9]{9}$"
+                    title="Enter a valid phone number"
+                />
+            </div>
+            <div className="mb-3">
                 <label htmlFor="message" className="form-label">
-                    Message
+                    Message<span style={{color:'red'}}>*</span>
                 </label>
                 <textarea
                     name='message'
