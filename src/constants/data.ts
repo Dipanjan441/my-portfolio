@@ -16,7 +16,7 @@ export const ProjectData = [
         description: "Contributed to the enhancement of an existing CMS website built on WordPress, designed to display various types of file data in a tabular format through a public-facing UI. The admin panel allows seamless uploading, updating, and management of data, making the site fully dynamic and secure.",
         buttonText: "View Project",
         technologies: ["WordPress","PHP","MySQL","jQuery","Bootstrap","Semantic HTML"],
-        onButtonClick: () => window.open("#", "_blank"),
+        onButtonClick: () => console.log('no link avaialable'),
     },
     {
         id: 2,
@@ -25,7 +25,7 @@ export const ProjectData = [
         description: "Developed two Android applications (Picker and Driver) for a quick commerce platform, enabling seamless order fulfillment and delivery management. Additionally, built a web-based back panel to streamline onboarding, task assignments, and operational workflows. The system supports real-time notifications, automated task allocation, and complex order modifications, ensuring smooth logistics and enhanced efficiency.",
         buttonText: "View Project",
         technologies: ["React","React Native","Tanstack Query","Redux-Toolkit","Material UI","React Hook Form"],
-        onButtonClick: () => window.open("#", "_blank"),
+        onButtonClick: () => console.log('no link avaialable'),
     },
     {
         id: 3,
@@ -34,7 +34,7 @@ export const ProjectData = [
         description: "Developed the frontend of a feature-rich form-based application designed for the client’s internal staff to efficiently evaluate job performance and manage payroll changes. The application includes dynamic forms, real-time validation, and multilingual support, ensuring a seamless and user-friendly experience.",
         buttonText: "View Project",
         technologies: ["React","react-i18next","Redux-Toolkit","Material UI","Styled Components"],
-        onButtonClick: () => window.open("#", "_blank"),
+        onButtonClick: () => console.log('no link avaialable'),
     },
     {
         id: 4,

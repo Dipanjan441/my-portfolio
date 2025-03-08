@@ -33,7 +33,7 @@ const NavbarComponent = ({setNavbarHeight}: Props) => {
             {
               NavbarItems.map((item)=>(
                 <Nav.Link as="div">
-                  <Link key={item.id} to={item.path} smooth={true} spy={true} duration={300} offset={-80} activeClass='active-link' >{item.title}</Link>
+                  <Link key={item.id} to={item.path} smooth={true} spy={true} duration={200} offset={-80} activeClass='active-link' >{item.title}</Link>
                 </Nav.Link>
               ))
             }
