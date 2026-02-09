@@ -20,9 +20,10 @@ const NavbarComponent = ({setNavbarHeight}: Props) => {
     <Navbar ref={navbarRef} expand="md" fixed='top' style={{width: '100%', boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)" }} className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="#home" className='fw-bold brand-highlight'>
-            <img src='logo.png'
+            <img src='/my-portfolio/logo.png'
             height='50'
             width='50'
+            alt='logo'
             />
             &nbsp;
             WebDev
